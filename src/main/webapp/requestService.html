@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Type Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+<form action="/car-service-form/RequestService">
+    <label for="CarRegistration">Car Registration Number:</label>
+    <input type="text" name="carreg" required>
+
+    <label for="servicetype">Select Service Type:</label>
+    <select id="servicetype" name="servicetype" required>
+        <option value="waterwash">Water Wash</option>
+        <option value="oilchange">Oil Change</option>
+        <option value="wheelchange">Wheel Change</option>
+        <option value="brakecheck">Brake Check</option>
+        <option value="enginecheck">Engine Check</option>
+        <option value="airfilter">Air Filter Replacement</option>
+        <option value="batteryreplace">Battery Replacement</option>
+        <option value="acrepair">AC Repair</option>
+        <option value="alignment">Wheel Alignment</option>
+        <option value="transmission">Transmission Service</option>
+    </select>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

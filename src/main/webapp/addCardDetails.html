@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Registration Form</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(120deg, #2980b9, #6dd5fa, #ffffff);
+            background-size: 300% 300%;
+            animation: gradientBackground 10s ease infinite;
+        }
+
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease-out;
+            width: 400px;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2em;
+            font-weight: 600;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        label {
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-size: 1em;
+            background-color: #f8f9fa;
+        }
+
+        input[type="text"]:focus {
+            border-color: #2980b9;
+            box-shadow: 0 0 10px rgba(41, 128, 185, 0.3);
+            outline: none;
+        }
+
+        input[type="submit"] {
+            padding: 15px;
+            width: 100%;
+            border: none;
+            border-radius: 30px;
+            background-color: #2980b9;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #21618c;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            form {
+                width: 90%;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="/car-service-form/AddDetails">
+        <h2>Car Registration Form</h2>
+
+        <div class="input-group">
+            <label for="carmodel">Car Model:</label>
+            <input type="text" id="carmodel" name="carmodel" required>
+        </div>
+
+        <div class="input-group">
+            <label for="cartype">Car Type:</label>
+            <input type="text" id="cartype" name="cartype" required>
+        </div>
+
+        <div class="input-group">
+            <label for="carreg">Car Registration:</label>
+            <input type="text" id="carreg" name="carreg" required>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
